@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./styles.css";
+import "./App.css";
 
 import SearchEngine from "./SearchEngine";
 import Footer from "./Footer.js";
