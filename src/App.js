@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./App.css";
+import "./Weather.css";
 
 import Weather from "./Weather.js";
 import Footer from "./Footer.js";
