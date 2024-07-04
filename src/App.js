@@ -9,9 +9,11 @@ import Footer from "./Footer.js";
 export default function App() {
   return (
     <body>
-      <div class="weather-app">
-        <Weather />
-        <Footer />
+      <div className="App">
+        <div className="container">
+          <Weather />
+          <Footer />
+        </div>
       </div>
     </body>
   );
