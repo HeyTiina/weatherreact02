@@ -1,8 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
 import ReactAnimatedWeather from "react-animated-weather";
 
-export default function WeatherIcon({ code, size }) {
+export default function WeatherIcon(props) {
   const codeMapping = {
     "01d": "CLEAR_DAY",
     "01n": "CLEAR_NIGHT",
@@ -26,19 +25,10 @@ export default function WeatherIcon({ code, size }) {
 
   return (
     <ReactAnimatedWeather
-      icon={codeMapping[code] || "CLEAR_DAY"} // Fallback to "CLEAR_DAY" if code is not found
+      icon={codeMapping[props.code]}
       color="#1e1e1e"
-      size={size}
+      size={props.size}
       animate={true}
     />
   );
 }
-
-WeatherIcon.propTypes = {
-  code: PropTypes.string.isRequired,
-  size: PropTypes.number,
-};
-
-WeatherIcon.defaultProps = {
-  size: 64,
-};
